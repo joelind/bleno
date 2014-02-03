@@ -216,6 +216,9 @@ int main(int argc, const char* argv[])
           i += 2;
         }
 
+        printf("ADV: %s\n", advertisementDataBuf);
+        printf("SCAN: %s\n", scanDataBuf);
+
         // stop advertising
         hci_le_set_advertise_enable(hciSocket, 0, 1000);
 
