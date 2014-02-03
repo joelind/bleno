@@ -103,6 +103,8 @@ int main(int argc, const char* argv[]) {
 
     result = select(serverL2capSock + 1, &afds, NULL, NULL, &tv);
 
+    printf("RESULT: %d\n", result);
+
     if (-1 == result) {
       if (SIGINT == lastSignal || SIGKILL == lastSignal) {
         break;
